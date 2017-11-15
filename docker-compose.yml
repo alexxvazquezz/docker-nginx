@@ -6,6 +6,7 @@ services:
       dockerfile: Dockerfile
     image: alexxvazquezz/nginx
     volumes:
-     - .:/var/www/html/public
+     - ./public:/var/www/html
     ports:
      - "80:80"
+    command: "service nginx start"
